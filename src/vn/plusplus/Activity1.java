@@ -5,16 +5,16 @@ import static java.lang.Thread.sleep;
 public class Activity1 {
     public Activity1 (int numThread) {
         for (int i = 1; i <= numThread; i++) {
-            Thread thread = new Thread(new MyThread(i));
+            Thread thread = new Thread(new A1Thread(i));
             thread.start();
         }
     }
 }
 
-class MyThread implements Runnable {
+class A1Thread implements Runnable {
     int idx;
 
-    public MyThread (int idx) {this.idx = idx;}
+    public A1Thread (int idx) {this.idx = idx;}
 
     @Override
     public void run() {
