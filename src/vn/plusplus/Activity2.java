@@ -24,9 +24,9 @@ class MyThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Thread " + prefix + ": " + System.currentTimeMillis());
         try {
             sleep(milisecond);
+            System.out.println("Thread " + prefix + ": " + System.currentTimeMillis());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
